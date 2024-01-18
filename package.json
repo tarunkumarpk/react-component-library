@@ -33,8 +33,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tarunkumarpk/react-component-library.git"
-  },
-  "publishConfig": {
-    "@tarunkumarpk:registry": "https://npm.pkg.github.com"
   }
 }
