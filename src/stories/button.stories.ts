@@ -10,23 +10,33 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Blue: Story = {
+export const OutlinedButton: Story = {
   args: {
     label: "Click me",
-    onClick: () => {},
     variant: "outlined",
+    style: {
+      color: "green",
+    },
   },
 };
 
-export const BlueBackground: Story = {
+export const TextButton: Story = {
   args: {
     label: "Click me",
-    onClick: () => {},
+    variant: "text",
+    color: "blue"
+  },
+};
+
+export const ContainedButton: Story = {
+  args: {
+    type: "submit",
+    label: "Click me",
     style: {
       backgroundColor: "green",
       color: "white",
     },
-    variant: "outlined",
+    variant: "contained",
     size: "large"
   },
 };

@@ -1,33 +1,38 @@
 import { CSSProperties } from "react";
-import "./style.css";
+import { StyledButton } from "./style";
 
 interface ButtonProps {
     label: string;
     type?: "submit" | "reset" | "button";
     variant?: "contained" | "outlined" | "text";
-    color?: "success" | "error" | "primary";
-    onClick?: Function;
+    color?: "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
+    backgroundColor?: "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
+    onClick?: React.FunctionComponent;
     size?: "small" | "medium" | "large";
     style?: CSSProperties;
 }
 
 const Button = ({
-    type,
+    type = "button",
     label,
-    variant,
-    color,
-    size,
+    variant = "contained",
+    color = "white",
+    backgroundColor = "blue",
+    size = "medium",
     onClick,
     style,
 }: ButtonProps) => {
-    return <button
+    return <StyledButton
         type={type}
+        onClick={onClick}
         style={style}
-        onClick={()=>{ onClick && onClick() }}
-        className={`${variant ?? "contained"} ${color} ${size ?? "medium"}`}
+        backgroundColor={backgroundColor}
+        variant={variant}
+        color={color}
+        size={size}
     >
         {label}
-    </button>;
+    </StyledButton>;
 };
 
 export default Button;
