@@ -1,4 +1,4 @@
-import { Input, Label, TextFieldWrapper } from "../styles";
+import { Input, Label, TextFieldWrapper } from "@/styles/textField.styled";
 
 interface TextFieldProps {
   label?: string;
