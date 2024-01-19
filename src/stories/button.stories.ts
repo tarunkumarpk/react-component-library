@@ -4,6 +4,54 @@ import type { StoryObj } from "@storybook/react";
 const meta = {
   title: "Button",
   component: Button,
+  argTypes: {
+    type: {
+      options: ["button", "submit", "reset"],
+      control: { type: "select" },
+    },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "select" },
+    },
+    color: {
+      options: [
+        "aqua",
+        "black",
+        "blue",
+        "gray",
+        "green",
+        "lime",
+        "maroon",
+        "purple",
+        "red",
+        "silver",
+        "white",
+        "yellow",
+      ],
+      control: { type: "select" },
+    },
+    backgroundColor: {
+      options: [
+        "aqua",
+        "black",
+        "blue",
+        "gray",
+        "green",
+        "lime",
+        "maroon",
+        "purple",
+        "red",
+        "silver",
+        "white",
+        "yellow",
+      ],
+      control: { type: "select" },
+    },
+    variant: {
+      options: ["contained", "outlined", "text"],
+      control: { type: "select" },
+    },
+  },
   tags: ["autodocs"],
 };
 
@@ -24,7 +72,7 @@ export const TextButton: Story = {
   args: {
     label: "Click me",
     variant: "text",
-    color: "blue"
+    color: "blue",
   },
 };
 
@@ -37,6 +85,6 @@ export const ContainedButton: Story = {
       color: "white",
     },
     variant: "contained",
-    size: "large"
+    size: "large",
   },
 };
