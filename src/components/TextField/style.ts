@@ -21,6 +21,7 @@ const Input = styled.input`
 const TextFieldWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 16px;
 `;
 
