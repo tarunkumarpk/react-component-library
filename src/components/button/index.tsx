@@ -1,12 +1,14 @@
 import { CSSProperties } from "react";
 import { StyledButton } from "./style";
 
+type color ="aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
+
 interface ButtonProps {
     label: string;
     type?: "submit" | "reset" | "button";
     variant?: "contained" | "outlined" | "text";
-    color?: "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
-    backgroundColor?: "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
+    color?: color;
+    backgroundColor?: color;
     onClick?: React.FunctionComponent;
     size?: "small" | "medium" | "large";
     style?: CSSProperties;

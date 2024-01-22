@@ -24,4 +24,9 @@ const TextFieldWrapper = styled.div`
   margin-bottom: 16px;
 `;
 
-export { Label, Input, TextFieldWrapper };
+const Required = styled.span`
+  color: red;
+  display: $display;
+`;
+
+export { Label, Input, TextFieldWrapper, Required };

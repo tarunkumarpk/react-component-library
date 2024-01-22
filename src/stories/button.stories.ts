@@ -1,6 +1,21 @@
 import Button from "../components/button";
 import type { StoryObj } from "@storybook/react";
 
+const colors = [
+  "aqua",
+  "black",
+  "blue",
+  "gray",
+  "green",
+  "lime",
+  "maroon",
+  "purple",
+  "red",
+  "silver",
+  "white",
+  "yellow",
+];
+
 const meta = {
   title: "Button",
   component: Button,
@@ -14,37 +29,11 @@ const meta = {
       control: { type: "select" },
     },
     color: {
-      options: [
-        "aqua",
-        "black",
-        "blue",
-        "gray",
-        "green",
-        "lime",
-        "maroon",
-        "purple",
-        "red",
-        "silver",
-        "white",
-        "yellow",
-      ],
+      options: colors,
       control: { type: "select" },
     },
     backgroundColor: {
-      options: [
-        "aqua",
-        "black",
-        "blue",
-        "gray",
-        "green",
-        "lime",
-        "maroon",
-        "purple",
-        "red",
-        "silver",
-        "white",
-        "yellow",
-      ],
+      options: colors,
       control: { type: "select" },
     },
     variant: {

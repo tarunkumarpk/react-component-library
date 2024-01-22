@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
 
+type color = "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
+
 export const StyledButton = styled.button<{
   variant?: "contained" | "outlined" | "text";
-  color?: "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
-  backgroundColor?: "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
+  color?: color;
+  backgroundColor?: color;
   size?: "small" | "medium" | "large";
 }>`
   cursor: pointer;
