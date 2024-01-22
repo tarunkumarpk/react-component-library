@@ -1,4 +1,4 @@
-import TextField from "@/components/textField";
+import TextField from "@/components/TextField";
 
 export default {
     title: "TextField",
@@ -6,7 +6,7 @@ export default {
     tags: ["autodocs"],
 };
 
-export const textField1 = {
+export const Default = {
     args: {
         label: "label",
         placeholder: "Place holder"
