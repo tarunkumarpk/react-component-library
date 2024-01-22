@@ -1,2 +1,2 @@
-export { default as TextField } from '@/components/TextField'
+export { default as TextField } from '@/components/textField'
 export {default as Button} from './button'
