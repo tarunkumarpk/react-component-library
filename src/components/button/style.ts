@@ -1,13 +1,12 @@
+import { CommonStyleTypes } from "@/types/commonStyle.types";
 import styled, { css } from "styled-components";
 
-type color = "aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
-
-export const StyledButton = styled.button<{
+interface StyledButtonType extends CommonStyleTypes {
   variant?: "contained" | "outlined" | "text";
-  color?: color;
-  backgroundColor?: color;
   size?: "small" | "medium" | "large";
-}>`
+}
+
+export const StyledButton = styled.button<StyledButtonType>`
   cursor: pointer;
   border-radius: 5px;
   outline: none;
@@ -18,7 +17,7 @@ export const StyledButton = styled.button<{
   ${({ variant }) =>
     variant === "contained" &&
     css`
-      background-color: "blue";
+      background-color: blue;
       color: white;
     `}
 
@@ -26,15 +25,16 @@ export const StyledButton = styled.button<{
     variant === "outlined" &&
     css`
       border: 2px solid black;
-      background-color: inherit;
+      background-color: {backgroundColor};
       color: black;
     `}
 
   ${({ variant }) =>
     variant === "text" &&
     css`
+      background-color: {backgroundColor};
+      color: inherit;
       border: none;
-      background-color: inherit;
     `}
     
   ${({ size }) =>

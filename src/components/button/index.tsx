@@ -1,17 +1,12 @@
-import { CSSProperties } from "react";
 import { StyledButton } from "./style";
+import { CommonComponentTypes } from "@/types/commonComponent.types";
 
-type color ="aqua" | "black" | "blue" | "gray" | "green" | "lime" | "maroon" | "purple" | "red" | "silver" | "white" | "yellow";
-
-interface ButtonProps {
+interface ButtonProps extends CommonComponentTypes {
     label: string;
     type?: "submit" | "reset" | "button";
     variant?: "contained" | "outlined" | "text";
-    color?: color;
-    backgroundColor?: color;
     onClick?: React.FunctionComponent;
     size?: "small" | "medium" | "large";
-    style?: CSSProperties;
 }
 
 const Button = ({
