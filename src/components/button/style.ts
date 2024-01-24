@@ -17,7 +17,7 @@ export const StyledButton = styled.button<StyledButtonType>`
   ${({ variant }) =>
     variant === "contained" &&
     css`
-      background-color: blue;
+      background-color: {backgroundColor | none};
       color: white;
     `}
 
